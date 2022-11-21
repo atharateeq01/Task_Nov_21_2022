@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table, tr, th, td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input type = "text" placeholder="For div using id" onchange = "document.getElementById('getbyid').innerHTML = this.value;">
+    <div id = "getbyid">  Div tag using id and input will change this tag  </div> <br>
+
+    <input type = "text" placeholder="For div using class" onchange = "divclass(this.value);">
+    <div class = "getbyclass">    Div tag using class and input will change this tag </div> <br>
+
+    <input type = "text" placeholder="For div only" onchange = "divs(this.value);">
+    <div>  Div tag only  and input will change this tag  </div> <br>
+
+    <input type = "text" placeholder="For p tag only" onchange = "ps(this.value);">
+    <p> P tag only and input will change this tag</p>
+
+    <input type = "text" placeholder="For h1 tag only" onchange = "h1s(this.value);">
+    <h1>  h1 tag only and input will change this tag  </h1>
+    
+    <input type = "text" placeholder="For h2 tag only" onchange = "h2s(this.value);">
+    <h2>  h2 tag only and input will change this tag  </h2>
+    
+    <input type = "text" placeholder="For h3 tag only" onchange = "h3s(this.value);">
+    <h3>  h3 tag only and input will change this tag  </h3>
+    
+    <input type = "text" placeholder="For h4 tag only" onchange = "h4s(this.value);">
+    <h4>  h4 tag only and input will change this tag  </h4>
+    
+    <input type = "text" placeholder="For h5 tag only" onchange = "h5s(this.value);">
+    <h5>  h5 tag only and input will change this tag  </h5>
+    
+    <input type = "text" placeholder="For h6 tag only" onchange = "h6s(this.value);">
+    <h6>  h6 tag only and input will change this tag </h6>
+
+    <script>
+        //for div class
+        function divclass(inputfrominput){
+            var change1 = document.getElementsByClassName("getbyclass");
+            console.log(change1);
+            change1[0].innerHTML = inputfrominput;
+        }
+
+        //for div tag
+        function divs(inputfrominput){
+            var change1 = document.getElementsByTagName("div");
+            change1[2].innerHTML = inputfrominput;
+        }
+        
+        // for p tag
+        function ps(inputfrominput){
+            var change1 = document.getElementsByTagName("p");
+            change1[0].innerHTML = inputfrominput;
+        }
+        
+        // for h1 tag
+        function h1s(inputfrominput){
+            var change1 = document.getElementsByTagName("h1");
+            change1[0].innerHTML = inputfrominput;
+        }
+        
+        // for h2 tag
+        function h2s(inputfrominput){
+            var change1 = document.getElementsByTagName("h2");
+            change1[0].innerHTML = inputfrominput;
+        }
+        
+        // for h3 tag
+        function h3s(inputfrominput){
+            var change1 = document.getElementsByTagName("h3");
+            change1[0].innerHTML = inputfrominput;
+        }
+        
+        // for h4 tag
+        function h4s(inputfrominput){
+            var change1 = document.getElementsByTagName("h4");
+            change1[0].innerHTML = inputfrominput;
+        }
+        
+        // for h5 tag
+        function h5s(inputfrominput){
+            var change1 = document.getElementsByTagName("h5");
+            change1[0].innerHTML = inputfrominput;
+        }
+
+        // for h6 tag
+        function h6s(inputfrominput){
+            var change1 = document.getElementsByTagName("h6");
+            change1[0].innerHTML = inputfrominput;
+        }
+    </script>
+
+
+    <table id = "tablefortask" style="width:50%; margin-left: auto; margin-right: auto;">
+        <tr >
+            <th>Row # </th>
+            <th>Tag used</th>
+            <th>change on </th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Div</td>
+            <td>By id</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Div</td>
+            <td>By class</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Div</td>
+            <td>By tag name</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>p</td>
+            <td>By tag name</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>h1</td>
+            <td>By tag name</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>h2</td>
+            <td>By tag name</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>h3</td>
+            <td>By tag name</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>h4</td>
+            <td>By tag name</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>h5</td>
+            <td>By tag name</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>h6</td>
+            <td>By tag name</td>
+          </tr>
+    </table>
+
+    <div style="width:50%; margin-left: auto; margin-right: auto;">
+            
+        Enter row you want to change
+        <input type = "number" placeholder="Row #" id = "rownumber" value = "-1"><br>
+        
+        Enter 1st cell value
+        <input type = "text" placeholder="1st cell" id = "cell1" value = "Null"><br>
+
+        Enter 1st cell value
+        <input type = "text" placeholder="2nd cell" id = "cell2" value = "Null"><br>
+
+        Enter 1st cell value
+        <input type = "text" placeholder="3rd cell" id = "cell3" value = "Null"><br>
+
+        <button type="button" onclick="changeintable();">Change it</button>
+    </div>
+
+    <script>
+        
+        function changeintable(){
+            let rowNo = document.getElementById('rownumber').value;
+            let cell1 = document.getElementById('cell1').value;
+            let cell2 = document.getElementById('cell2').value;
+            let cell3 = document.getElementById('cell3').value;
+            var mytable = document.getElementById('tablefortask');
+            console.log(rowNo, cell1, cell2, cell3);
+            if(rowNo == -1 || rowNo >= mytable.rows.length){
+                window.alert('You enter invaild row number');
+            }
+            else{
+                mytable.rows[rowNo].cells[0].innerHTML = cell1;
+                mytable.rows[rowNo].cells[1].innerHTML = cell2;
+                mytable.rows[rowNo].cells[2].innerHTML = cell3;
+            }
+        }
+
+    </script>    
+</body>
+</html>
